@@ -140,7 +140,7 @@ export class Splide extends React.Component<SplideProps> {
    *
    * @return A track element node.
    */
-  protected renderTrack(shadow?: React.Component): ReactNode {
+  protected renderTrack(shadow?: JSX.Element): ReactNode {
     return (
       <div className="splide__track">
         {shadow}
@@ -168,7 +168,7 @@ export class Splide extends React.Component<SplideProps> {
       renderControls,
       shadow
     } = this.props;
-
+    console.log("shadow is " + shadow);
     return (
       <div
         id={ id }

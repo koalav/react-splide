@@ -1,5 +1,5 @@
 import { ComponentConstructor, Options } from '@splidejs/splide';
-import { Component, ReactNode, ReactNodeArray } from 'react';
+import { ReactNode, ReactNodeArray } from 'react';
 import { SplideEventHandlers } from './events';
 
 
@@ -15,5 +15,5 @@ export interface SplideProps extends Partial<SplideEventHandlers> {
   playButtonLabel?: string;
   pauseButtonLabel?: string;
   renderControls?: () => ReactNode | ReactNodeArray;
-  shadow?: Component
+  shadow?: JSX.Element
 }
