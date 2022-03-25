@@ -140,9 +140,10 @@ export class Splide extends React.Component<SplideProps> {
    *
    * @return A track element node.
    */
-  protected renderTrack(): ReactNode {
+  protected renderTrack(shadow?: React.Component): ReactNode {
     return (
       <div className="splide__track">
+        {shadow}
         <ul className="splide__list">
           { this.props.children }
         </ul>
@@ -165,6 +166,7 @@ export class Splide extends React.Component<SplideProps> {
       playButtonLabel  = 'Play',
       pauseButtonLabel = 'Pause',
       renderControls,
+      shadow
     } = this.props;
 
     return (
@@ -175,7 +177,7 @@ export class Splide extends React.Component<SplideProps> {
       >
         { hasSliderWrapper
           ? <div className="splide__slider">{ this.renderTrack() }</div>
-          : this.renderTrack()
+          : this.renderTrack(shadow)
         }
 
         { hasAutoplayProgress &&
